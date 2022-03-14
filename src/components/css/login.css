@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: flex;
+    height: 90vh;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 50%;
+    height: 100%;
+    padding : 10px 0;
+}
+
+.left h4{
+    font-size: 50px;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    padding: rem 0;
+}
+
+.right{
+    display: flex;
+    width: 50%;
+}
+
+.form-div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content:center;
+    padding: 5% 5%; 
+}
+
+.signup{
+    margin-left: 40%;
+}
+
+.form-outermost{
+    margin: 0 10%;
+    width: 80%;
+}
+
+.form-outermost a{
+    color: #2CBB99;
+    float: right;
+    margin-top: 4px;
+    padding: 0 10px;
+}
+
+.btn{
+    border: 0;
+    background-color: #2CBB99;
+}
