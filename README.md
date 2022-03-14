@@ -9,17 +9,25 @@ Mr. Arun wishes to barter one of his produces for mushrooms from Ms. Daisy and s
 As developers, you need to identify the user journey, in-app user experience and an appealing user interface to develop a web application using HTML, CSS and JavaScript. If as a group you feel there is more capacity, you can explore React/Angular but keep in mind not to spend too much time deciding on technology stacks. The goal of this group project is to see how well you are able to discuss and pull together a unified product vision. You will not have access to any internal data and are free to take inspiration from other similar products (If any).
 
 Requirements
+
 •	The application should be able to display notifications/alerts when a barter request is raised.
+
 •	Show pictures of the produce and time to harvest 
+
 •	Show details of the produce nearby that are ready to harvest
+
 •	Create a tab attached to the produce to barter, accept barter and reject barter (Reject barter will have space for rejection reason)
 
 You are free to add more requirements in addition to the above if you feel it will improve the user experience. 
 
 Milestones and deliverables 
+
 Over the time that you have been allotted, as a group you will need to: 
+
 •	Create wireframes based on the project brief. 
+
 •	Create a website using HTML, CSS, and JavaScript. 
+
 •	Create a group presentation that explains your proposed approach. 
 
 You will present your findings and proposed solution via the group presentation that you create. You will have 20 minutes of presentation time in total. You should allow for presentation time for each team member. Your presentation should not extend beyond 20 minutes, as there will also be questions from the panel. 
