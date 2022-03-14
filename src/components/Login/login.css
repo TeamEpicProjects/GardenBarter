@@ -5,6 +5,8 @@
     padding: 0;
 }
 
+/* Styling of Left side */ 
+
 .wrapper{
     display: flex;
     height: 90vh;
@@ -12,23 +14,34 @@
 
 .left{
     display: flex;
+    flex : 1 1 10rem;
     flex-direction: column;
-    justify-content: left;
-    width: 50%;
-    height: 100%;
+    /* width: 50%; */
+    justify-content: center;
+    align-items: center;
     padding : 10px 0;
 }
 
+.left img{
+    width: 100%;
+}
+
+
 .left h4{
-    font-size: 50px;
+    font-size: 3rem;
     font-family: 'Satisfy', cursive;
     text-align: center;
     padding: rem 0;
 }
 
+/* Styling of left side ends */
+
+/* Style right side of the page */
+
 .right{
     display: flex;
-    width: 50%;
+    /* width: 50%; */
+    flex : 1 1 10rem;
 }
 
 .form-div{
@@ -49,7 +62,7 @@
 }
 
 .form-outermost a{
-    color: #2CBB99;
+    color: #083b2f;
     float: right;
     margin-top: 4px;
     padding: 0 10px;
@@ -59,3 +72,15 @@
     border: 0;
     background-color: #2CBB99;
 }
+
+/* Media Query */
+
+@media screen and (max-width : 790px)
+{
+    .wrapper{
+        flex-direction: column;
+        padding  : 2rem;
+    }        
+}
+
+/* Styling of right side ends */

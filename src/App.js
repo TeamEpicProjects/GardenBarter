@@ -1,16 +1,17 @@
 import './App.css';
-import Login from './login'
+import Login from '../src/components/Login/login';
+
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard/dashboard';
 
 function App() {
   return (
     <div className="App">
-      {/* navbar */}
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
