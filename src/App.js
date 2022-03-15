@@ -3,6 +3,8 @@ import Login from '../src/components/Login/login';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard/dashboard';
+import NearbyCard from './components/Nearby/NearbyCard';
+import Footer from './components/Footer/footer';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

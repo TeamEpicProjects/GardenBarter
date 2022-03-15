@@ -2,23 +2,38 @@ import React from 'react'
 import './login.css'
 import icon from '../../assets/image.jpg'
 import Navbar from '../Navbar/Navbar';
-
+import bushes from '../../assets/bushes.png'
+import {Link} from 'react-router-dom';
 function login() {
     function changeHeading() {
-        document.getElementsByClassName('signup').innerHTML = "Login";
+        if (document.getElementById('singUp-title').innerHTML == 'Sign Up') {
+            document.getElementById('singUp-title').innerHTML = "Login";
+            document.getElementById('signUp-link').innerHTML = "Create New Account";
+        }
+        else {
+            document.getElementById('singUp-title').innerHTML = "Sign Up";
+            document.getElementById('signUp-link').innerHTML = "Already in the system?";
+        }
+
     }
     return (
         <>
             <Navbar />
             <div className="wrapper">
                 <div className="left">
-                    <img src={icon} alt="intro_image" />
-                    <h4>A new way to invest in agriculture</h4>
+                    <div className="left-up">
+                        <img src={icon} alt="intro_image" />
+                        <h4>A new way to invest in agriculture</h4>
+                    </div>
+                    <div className="left-down">
+                        <p>GardenBarter is an Agri-tech start-up that aims to utilize empty spaces inside apartment complexes to grow
+                            fresh produce in communal spaces and private balconies.  </p>
+                    </div>
                 </div>
                 <div className="right">
                     <div className="form-div">
                         <form className='form-outermost'>
-                            <h2 className='signup'> Sign Up</h2>
+                            <h2 className='signup' id="singUp-title"> Sign Up</h2>
                             <div className="mb-3">
                                 <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email Address' />
@@ -28,14 +43,22 @@ function login() {
                                 <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                                 <input type="password" className="form-control" id="exampleInputPassword1" placeholder='Password' />
                             </div >
-                            <button type="submit" className="btn btn-primary" > Submit</button >
-                            <a href="#" onClick={changeHeading} >Already in the system ?</a>
+                            <div className='btns-login'>
+                            <Link to='/dashboard'>
+                            <button type="submit" className="btn-submit btn-primary" > Submit</button >
+                            </Link>
+                            <a href="#" id="signUp-link" onClick={changeHeading} >Already in the system ?</a>
+                            </div>
                         </form >
                     </div >
                 </div >
+
             </div >
+            <div className="bushes">
+                <img src={bushes} alt="" />
+            </div>
         </>
     )
 }
 
-export default login;
+export default login;       
