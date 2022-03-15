@@ -15,6 +15,8 @@ const Dashboard = () => {
     setRenderSate(farmStatus);
   }
 
+  
+
   return (
     <>
       <div className="dashboardWrapper">
