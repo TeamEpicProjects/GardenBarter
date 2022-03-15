@@ -53,3 +53,6 @@
   object-fit: cover;
   border-radius: 10px !important;
 }
+.btn-red {
+  background-color: red;
+}
