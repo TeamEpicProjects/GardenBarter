@@ -6,6 +6,7 @@ const Navbar = () => {
         <nav className="navbar d-flex p-4">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">BarterGarden</a>
+                <a className='contact-btn' href="#footer">Contact Us</a>
             </div>
         </nav>
     )

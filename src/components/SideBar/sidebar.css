@@ -22,9 +22,14 @@
   text-align: center;
   padding-top: 30px;
 }
+
+
 .box2 {
   padding-top: 30px;
 }
 .box2 a {
   font-size: 20px;
+}
+.btn2 {
+  background-color: #ddd;
 }
