@@ -21,3 +21,7 @@ input{
 .card{
     padding: 0.8rem 1.4rem;
 }
+
+.card img{
+    height: 170px;
+}

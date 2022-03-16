@@ -1,34 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+// import { bartarList } from '../Data/Data';
 
-const AlertCard = () => {
+
+const AlertCard = ({ bartarList, removeHandler, id }) => {
   const [showInput, setShowInput] = useState(false);
   const [reason, setReason] = useState('');
+
 
   const openInput = () => {
     setShowInput(!showInput);
   };
 
-  const closeNotifi = () => {
-    document.getElementById('notify').remove();
-  };
 
-  const onSubmit = () => {
-    document.getElementById('notify').remove();
-  };
-
-  console.log(reason);
   return (
-    <div class="alert alert-success" role="alert">
+    <div className="alert alert-success" role="alert">
       <div id="notify">
-        <h5 class="alert-heading">Ms Daisy's Request</h5>
+        <h5 className="alert-heading">{bartarList.name}'s Request</h5>
         <ul>
-          <li>Item Grown: Carrots</li>
-          <li>Quantity: 5 kgs</li>
-          <li>Harvest Time: Ready to Harvest</li>
+          <li>Item Grown: {bartarList.item}</li>
+          <li>Quantity: {bartarList.quantity}</li>
+          <li>Harvest Time: {bartarList.time}</li>
         </ul>
         <hr />
         <div className="mb-0 flexR">
-          <button className="btn text-white" onClick={closeNotifi}>
+          <button className="btn text-white" onClick={() => removeHandler(bartarList.id)}>
             <i className="fa fa-check"></i>
           </button>
           <button className="btn btn-red mx-3 text-white" onClick={openInput}>
@@ -38,7 +33,7 @@ const AlertCard = () => {
 
         <div style={showInput ? { display: 'block' } : { display: 'none' }}>
           <input className="form-control mt-4" placeholder="Specify Reason" />
-          <button className="btn" onClick={onSubmit}>
+          <button className="btn" onClick={() => removeHandler(id)}>
             Submit
           </button>
         </div>

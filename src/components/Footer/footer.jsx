@@ -14,28 +14,28 @@ const Footer = () => {
                     <div className="footer-contact">
                         <h2>Contact Us</h2>
                         <form className='contact-form'>
-                            <div className='row'>
-                                <div className='col-8'>
-                            <input type="text" name="Email" id="Email-id" placeholder=' Email-ID' />
-                            <textarea name="message" id="message" placeholder=' Type your query here' />
-                            </div>
-                            <div className='col-4'>
-                            <button className='btn btn-light'>Send</button>
-                            </div>
+                            <div className='contact-detail'>
+                                <div className=''>
+                                    <input type="text" name="Email" id="Email-id" placeholder=' Email-ID' />
+                                    <textarea name="message" id="message" placeholder=' Type your query here' />
+                                </div>
+                                <div className='qbtn'>
+                                    <button className='btn btn-light'>Send</button>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div className="footer-right">
-                    <div style={{padding:"8%"}}>
-                    <h2>Social Links</h2>
-                    <div className="social-media">
-                        <a href="https://www.linkedin.com/company/packt-publishing/"><img src={linkedln} alt="" /></a>
-                        <a href="https://twitter.com/PacktPub?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src={twitter} alt="" /></a>
-                        <a href="https://www.facebook.com/PacktPub/"><img src={facebook} alt="" /></a>
-                        <a href="https://www.youtube.com/user/packt1000/featured"><img src={youtube} alt="" /></a>
-                        <a href="https://github.com/PacktPublishing"><img src={github} alt="" /></a>
-                    </div>
+                    <div style={{ padding: "4%" }}>
+                        <h2 className='text-center'>Social Links</h2>
+                        <div className="social-media">
+                            <a href="https://www.linkedin.com/company/packt-publishing/"><img src={linkedln} alt="" /></a>
+                            <a href="https://twitter.com/PacktPub?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src={twitter} alt="" /></a>
+                            <a href="https://www.facebook.com/PacktPub/"><img src={facebook} alt="" /></a>
+                            <a href="https://www.youtube.com/user/packt1000/featured"><img src={youtube} alt="" /></a>
+                            <a href="https://github.com/PacktPublishing"><img src={github} alt="" /></a>
+                        </div>
                     </div>
                     <div className="columns">
                         <div className='column-1'>
@@ -53,8 +53,8 @@ const Footer = () => {
             </div>
             <div className="footer-copyright">
                 <p> &copy; GardenBarter</p>
-                </div>
-            
+            </div>
+
         </footer >
     );
 };

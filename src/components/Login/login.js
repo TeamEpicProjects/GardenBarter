@@ -4,6 +4,7 @@ import icon from '../../assets/image.jpg';
 import Navbar from '../Navbar/Navbar';
 import bushes from '../../assets/bushes.png';
 import { Link, useNavigate } from 'react-router-dom';
+
 function Login() {
   function changeHeading() {
     if (document.getElementById('singUp-title').innerHTML == 'Sign Up') {
@@ -12,7 +13,7 @@ function Login() {
     } else {
       document.getElementById('singUp-title').innerHTML = 'Sign Up';
       document.getElementById('signUp-link').innerHTML =
-        'Already in the system?';
+        'Already in the system ?';
     }
   }
   const navigate = useNavigate();
@@ -22,8 +23,10 @@ function Login() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('user', JSON.stringify(user));
-    navigate('/dashboard');
+    if (validation()) {
+      localStorage.setItem('user', JSON.stringify(user));
+      navigate('/dashboard');
+    }
   };
 
   useEffect(() => {
@@ -31,6 +34,42 @@ function Login() {
       navigate('/dashboard');
     }
   }, []);
+
+  const validation = () => {
+    let email = document.getElementById("exampleInputEmail1");
+    let password = document.getElementById("exampleInputPassword1");
+
+    console.log(password);
+
+    let emailMsg = document.getElementById("emailMsg");
+    let passMsg = document.getElementById("passMsg");
+
+    let flag = 1;
+
+    if (email.value === "") {
+      emailMsg.innerHTML = "Email is required";
+      emailMsg.style = "color: red";
+
+      flag = 0;
+
+    }
+
+    if (password.value == "") {
+      console.log("Hello");
+      passMsg.innerHTML = "Password is required";
+      passMsg.style = "color: red";
+      flag = 0;
+    }
+
+    if (flag) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
   return (
     <>
       <Navbar />
@@ -57,24 +96,26 @@ function Login() {
               </h2>
               <div className="mb-3">
                 <label htmlFor="exampleInputEmail1" className="form-label">
-                  Email address
+                  User Name / Email Id
                 </label>
                 <input
                   type="email"
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Email Address"
+                  placeholder="User Name / Email Id"
                   name="email"
                   value={user.email}
                   onChange={(e) => setUser({ ...user, email: e.target.value })}
                 />
+                <p id="emailMsg"></p>
+
                 <div id="emailHelp" className="form-text">
                   We'll never share your email with anyone else.
                 </div>
               </div>
               <div className="mb-3">
-                <label htmlFor="exampleInputPassword1" className="form-label">
+                <label id="password" htmlFor="exampleInputPassword1" className="form-label">
                   Password
                 </label>
                 <input
@@ -88,6 +129,8 @@ function Login() {
                     setUser({ ...user, password: e.target.value })
                   }
                 />
+                <p id="passMsg"></p>
+
               </div>
               <div className="btns-login">
                 <button

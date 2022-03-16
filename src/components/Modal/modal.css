@@ -15,3 +15,15 @@ input[type=file] {
     width: 21px;
     height: 21px;
 }
+
+#errorMsg{
+    color: red;
+    font-size: 15px ;
+}
+
+@media screen and (max-width : 800px){
+
+.modal-backdrop.show{
+    display: none !important;
+}
+}

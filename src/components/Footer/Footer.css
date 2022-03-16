@@ -21,18 +21,15 @@ footer{
 /* Styling left part*/
 
 .footer-left{
-    flex : 1 1 10rem;
+    flex : 1 1 6rem;
 }
 
-.footer-contact{
-    width: 60%;
-    text-align: center;
-}
 
 .footer-right{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-right:2rem;
 }
 .contact-form{
     width: 100%;
@@ -61,18 +58,17 @@ footer{
 }
 
 .contact-form button{
-    width: 75%;
+    width: 100%;
     margin-top: 1.2rem;
     border-radius: 10px;
+    padding: 0.3rem 2rem 0.3rem;
+
 }
 
 /* Styling of left part ends here */
 
 /* Styling right part*/
 
-.footer-right{
-    width: 40%;
-}
 
 .social-media{
     display: flex;
@@ -104,17 +100,31 @@ footer{
     text-align: center;
     width: 100%;
     background-color: #bbffef;
+    
 }
-
+.footer-copyright p{
+    margin-top:1rem;
+    font-weight: bold;
+    color: #2cbb99;
+}
 .columns{
     display: flex;
     justify-content: center;
+    width: 20rem;
 }
-
+.columns div a:hover{
+    font-weight: bold;
+    color:#2cbb99;
+}
 .column-2, .column-1{
     padding: 0 1rem;
 }
-
+.qbtn{
+    padding-left: 2rem;
+}
+.contact-detail{
+    display: flex;
+}
 @media screen and (max-width : 750px) {
     .footer-wrapper{
         flex-direction: column;
@@ -129,5 +139,19 @@ footer{
     .footer-contact{
         width: 100%;
     }
-
+    .footer-right{
+        width:100%;
+        padding-right:0rem;
+        flex-direction: column;
+    }
+    .qbtn{
+        width: 45%;
+        margin: 0 auto;
+    }
+    .contact-detail{
+        flex-direction: column;
+    }
+    .footer-contact h2{
+        text-align: center;
+    }
 }

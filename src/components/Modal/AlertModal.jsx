@@ -1,11 +1,12 @@
 import React from 'react';
+import { bartarList } from '../Data/Data';
 
 const Modal = () => {
   return (
     <>
       <button
         type="button"
-        class="btn btn2"
+        className="btn btn2"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal2"
       >
@@ -13,17 +14,17 @@ const Modal = () => {
       </button>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal2"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
               <h5
-                class="modal-title"
+                className="modal-title"
                 style={{ color: 'black' }}
                 id="exampleModalLabel"
               >
@@ -31,19 +32,19 @@ const Modal = () => {
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              <div class="modal-body">
-                <div class="container-fluid text-black">
-                  <div class="row">
-                    <div class="col-md-4">Product Name</div>
-                    <div class="col-md-8">
+            <div className="modal-body">
+              <div className="modal-body">
+                <div className="container-fluid text-black">
+                  <div className="row">
+                    <div className="col-md-4">Product Name</div>
+                    <div className="col-md-8">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         placeholder="Default input"
                         value="Potato"
@@ -51,11 +52,11 @@ const Modal = () => {
                       />
                     </div>
                   </div>
-                  <div class="row mt-3">
-                    <div class="col-md-4">Quantity</div>
-                    <div class="col-md-8">
+                  <div className="row mt-3">
+                    <div className="col-md-4">Quantity</div>
+                    <div className="col-md-8">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         placeholder="5-100Kg"
                         aria-label="default input example"
@@ -63,11 +64,11 @@ const Modal = () => {
                     </div>
                   </div>
 
-                  <div class="row mt-3">
-                    <div class="col-md-4">Expected Date</div>
-                    <div class="col-md-8">
+                  <div className="row mt-3">
+                    <div className="col-md-4">Expected Date</div>
+                    <div className="col-md-8">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         placeholder="7 days"
                         aria-label="default input example"
@@ -83,9 +84,9 @@ const Modal = () => {
                 </div>
               </div>
             </div>
-            {/* <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send Request</button>
+            {/* <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Send Request</button>
               </div> */}
           </div>
         </div>
