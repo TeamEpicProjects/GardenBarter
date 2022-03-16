@@ -3,7 +3,8 @@ import './login.css';
 import icon from '../../assets/image.jpg';
 import Navbar from '../Navbar/Navbar';
 import bushes from '../../assets/bushes.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 function Login() {
   function changeHeading() {
     if (document.getElementById('singUp-title').innerHTML == 'Sign Up') {
